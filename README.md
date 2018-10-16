@@ -45,7 +45,7 @@ requests per second. There is also only one query, which is repeated throughout 
 execution: `{"query": {"term": {"text": {"value": "Brazil"}}}}`
 
 ```bash
-$ echo '{"query": {"term": {"text": {"value": "$RDICT"}}}}' |  ./esperf loadspec gen --arrival_spec=poisson:5 --dictionary_file=small_dict.txt --duration=5s "http://localhost:9200/wikipediax/_search?search_type=query_then_fetch"
+$ echo '{"query": {"term": {"text": {"value": "$RDICT"}}}}' |  ./esperf loadspec gen --arrival_spec=poisson:5 --dictionary_file=small_dict.txt --duration=10s "http://localhost:9200/wikipediax/_search?search_type=query_then_fetch"
 ```
 
 In this case:
